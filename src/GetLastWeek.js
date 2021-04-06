@@ -8,7 +8,6 @@ function GetLastWeek(){
         var Xmas95 = new Date(daysAgo[i]);
         weekday[i] = Xmas95.getDay();
     }
-    console.log(weekday)
     return weekday
 }
 
