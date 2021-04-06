@@ -2,16 +2,25 @@ import WeekWeather from './WeekWeather';
 import './index.css';
 import night_full_moon_clear from './weather-icons/night_full_moon_clear.png';
 
+var dias_da_semana = ["DOMINGO", "SEGUNDA-FEIRA", "TERÇA-FEIRA", "QUARTA-FEIRA", "QUINTA-FEIRA", "SEXTA-FEIRA", "SÁBADO"];
+var meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL",  "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
 function App() {
+  var data = new Date;
+  var dia = data.getDate(data);
+  var mes = data.getMonth(data);
+  var ano = data.getFullYear(data);
+  var wday = data.getDay(data);
+
+
   return (
     <div className="App">
       <main>
         <section className="week-day-month">
-            <h3>QUARTA-FEIRA</h3>
+            <h3>{dias_da_semana[wday]}</h3>
             <div>
-              <h1>30</h1>
-              <h2>ABRIL</h2>
-              <h2>2021</h2>
+              <h1>{dia}</h1>
+              <h2>{meses[mes]}</h2>
+              <h2>{ano}</h2>
           </div>
         </section>
         <section className="temperature">
