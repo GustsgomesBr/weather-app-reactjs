@@ -58,6 +58,11 @@ aside{
     font-weight: 500;
 }
 
+.week-day-month h4{
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
 .temperature{
     height: 30%;
     color: #353535;
@@ -65,10 +70,20 @@ aside{
     align-items: center;
 }
 
+.temperature img{
+    width: 150px;
+    height: 150px;
+    margin-left: 3rem;
+}
+
 .temperature h1{
     font-size: 120pt;
     margin-left: 3rem;
     font-weight: 300;
+}
+
+#lastweek{
+    margin-left: 1rem;
 }
 
 .week-weather-section{
