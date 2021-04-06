@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-function GetWeather(){ 
+function GetLastWeek(){ 
     var daysAgo = {}
     var weekday = {}
     for(var i=1; i<=7; i++) {
@@ -12,4 +12,4 @@ function GetWeather(){
     return weekday
 }
 
-export default GetWeather;
+export default GetLastWeek;

@@ -18,15 +18,17 @@ function App() {
           <h1>20°</h1>
           <img src={night_full_moon_clear}></img>
         </section>
-        <h4 id="lastweek">Semana passada</h4>
         <section className="week-weather-section">
-          <WeekWeather id="1"/>
-          <WeekWeather id="2"/>
-          <WeekWeather id="3"/>
-          <WeekWeather id="4"/>
-          <WeekWeather id="5"/>
-          <WeekWeather id="6"/>
-          <WeekWeather id="7"/>
+          <h4 id="lastweek">Semana passada</h4>
+          <div className="section-week">
+            <WeekWeather id="1"/>
+            <WeekWeather id="2"/>
+            <WeekWeather id="3"/>
+            <WeekWeather id="4"/>
+            <WeekWeather id="5"/>
+            <WeekWeather id="6"/>
+            <WeekWeather id="7"/>
+          </div>
         </section>
       </main>
       <aside>

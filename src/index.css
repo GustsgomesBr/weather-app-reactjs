@@ -84,14 +84,22 @@ aside{
 
 #lastweek{
     margin-left: 1rem;
+    font-weight: 300;
 }
 
 .week-weather-section{
     width: 100%;
     height: 40%;
+    margin-top: 2rem;
+}
+
+.week-weather-section .section-week{
+    width: 100%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
 .week-Weather-item{
