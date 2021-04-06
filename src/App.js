@@ -27,7 +27,6 @@ function App() {
 
 GetWeather('Campo Grande', 'br');
 
-
   return (
     <div className="App">
       <main>

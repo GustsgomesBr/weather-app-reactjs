@@ -18,8 +18,8 @@ body{
 
 div .App{
     background: #FFFFFF;
-    width: 80vw;
-    height: 80vh;
+    width: 85vw;
+    height: 85vh;
     box-shadow: 15px 15px 30px rgba(0,0,0, 0.3);
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -28,7 +28,7 @@ div .App{
 aside{
     width: 100%;
     height: 100%;
-    background: green;
+    background: tomato;
 }
 
 main{
@@ -48,24 +48,24 @@ main{
 }
 
 .week-day-month h1{
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 0.5rem;
     font-size: 30pt;
 }
 .week-day-month h2{
     margin-left: 0.5rem;
     font-size: 30pt;
-    font-weight: 400;
+    font-weight: 500;
 }
 .week-day-month h3{
     margin-left: 0.5rem;
     font-size: 20pt;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .week-day-month h4{
     margin-left: 0.5rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .temperature{
