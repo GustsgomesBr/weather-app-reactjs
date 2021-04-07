@@ -12,13 +12,12 @@ var estacoesAno = {
 
 function BgColor(){
     var data = new Date()
-
-    var horario = data.getHours();
+    var horario = data.getHours();  
     
     if(horario >= 0 && horario <= 4){
-      document.body.style = 'background: linear-gradient(to bottom, #000428, #004e92)'
+      document.body.style = 'background: linear-gradient(to bottom, #000217, #000428)'
     }else if(horario >= 5 && horario <= 7){
-      document.body.style = 'background: linear-gradient(to top, #fdc830, #f37335)'
+      document.body.style = 'background: linear-gradient(to bottom, #000428, #004e92)'
     }else if(horario >= 8 && horario <= 10){
       document.body.style = 'background: linear-gradient(to bottom, #00b4db, #0083b0);'
     }else if(horario >= 11 && horario <= 16){
