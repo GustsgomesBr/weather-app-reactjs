@@ -1,27 +1,31 @@
 import WeekWeather from './WeekWeather';
 import './index.css';
-import night_full_moon_clear from './weather-icons/night_full_moon_clear.png';
 import {useState} from 'react'
+import GetIcon from './GetIcon';
 
 var dias_da_semana = ["DOMINGO", "SEGUNDA-FEIRA", "TERÇA-FEIRA", "QUARTA-FEIRA", "QUINTA-FEIRA", "SEXTA-FEIRA", "SÁBADO"];
 var meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL",  "MAIO", "JUNHO", "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
 
 function App() {
-  var data = new Date;
+  var data = new Date();
   var dia = data.getDate(data);
   var mes = data.getMonth(data);
   var ano = data.getFullYear(data);
   var wday = data.getDay(data);
   
+  const [tempIcon, setTempIcon] = useState(null);
+
   const [temperatura, setTemperatura] = useState(0);
 
   async function GetWeather(city, country){
     try{
         const result = await fetch(`http://api.weatherapi.com/v1/current.json?key=fdb83cfc5a88467a804225243210504&q=${city},${country}&aqi=no`)
         const data = await result.json();
+        setTempIcon(GetIcon(data.current.condition.code));
+        console.log(data.current.condition.code);
         setTemperatura(data.current.temp_c);
     }catch(error){
-        alert(error)
+        console.error(error)
     }
 }
 
@@ -40,7 +44,7 @@ GetWeather('Campo Grande', 'br');
         </section>
         <section className="temperature">
           <h1>{temperatura}°</h1>
-          <img src={night_full_moon_clear}></img>
+          <img src={tempIcon} alt=""></img>
         </section>
         <section className="week-weather-section">
           <h4 id="lastweek">Semana passada</h4>
@@ -51,7 +55,6 @@ GetWeather('Campo Grande', 'br');
             <WeekWeather id="4"/>
             <WeekWeather id="5"/>
             <WeekWeather id="6"/>
-            <WeekWeather id="7"/>
           </div>
         </section>
       </main>
